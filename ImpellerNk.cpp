@@ -9,5 +9,14 @@ float ImpDistFromSpins(float nSpins)
 
    distCm = nSpins * static_cast<float> (DIST_PER_SPIN_CM);
 
-   return distCm / METERS_PER_CM;
+   return distCm / static_cast<float> (METERS_PER_CM);
 }
+
+float ImpSpinsFromDist(float distM)
+{
+   float distCm;
+
+   distCm = distM * static_cast<float> (METERS_PER_CM);
+   return distCm /  static_cast<float> (DIST_PER_SPIN_CM);
+}
+
